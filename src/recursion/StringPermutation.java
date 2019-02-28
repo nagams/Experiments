@@ -25,14 +25,6 @@ public class StringPermutation {
             return Arrays.asList(str);
         }
 
-//        if (str.length() == 2) {
-//            char[] chars = str.toCharArray();
-//            char t = chars[1];
-//            chars[1] = chars[0];
-//            chars[0] = t;
-//            return Arrays.asList(str, String.valueOf(chars));
-//        }
-
         return addOneChar(permute(str.substring(0, str.length()-1)), str.charAt(str.length()-1));
     }
 
